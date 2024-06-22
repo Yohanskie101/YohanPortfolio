@@ -9,7 +9,6 @@
 
 body {
   overflow-x: hidden;
-  font-family: "Proxima Nova", sans-serif;
 }
 #HomeSection,
 #AboutSection {
@@ -75,17 +74,54 @@ body {
 }
 
 .BoxMe {
-  height: 400px;
+  height: 450px;
   width: 350px;
   background-color: #333b50;
   position: relative;
   left: 350px;
-  top: 150px;
-  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.2); /* Add box shadow */
+  top: 120px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2); /* Add box shadow */
   color: white;
-  font-weight: bolder;
-  font-size: 20px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 35px 10px 10px 10px;
+}
+
+.ProfileImg {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid;
+}
+
+.BoxMe p {
+  font-family: "Inter", sans-serif; /* Use Inter font as the primary font */
+}
+.BoxMe .Box-paragraphs p:first-of-type {
+  margin-top: 20px;
+}
+.BoxMe .Box-paragraphs p {
+  display: flex;
+  justify-content: center;
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+.Underline {
+  margin-top: 20px;
+  width: 50px;
+  border-top: 2px solid #f0f0f0;
+}
+
+.BoxMe .Box-paragraphs2 {
+  margin-top: 20px;
+}
+
+.BoxMe .Box-paragraphs2 p {
+  letter-spacing: 2px;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 5px;
 }
