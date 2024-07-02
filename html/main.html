@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/main.css" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Radwave&display=swap"
       rel="stylesheet"
@@ -23,7 +24,6 @@
     <title>Yohan Portfolio</title>
   </head>
   <body>
-    <!--Menu bar Start-->
     <div class="menubar">
       <button class="Logo">Yohan</button>
       <div class="top-container">
@@ -36,12 +36,10 @@
         </ul>
       </div>
     </div>
-    <!--Menu bar End-->
 
-    <!--First Section (HomeSection)-->
     <header id="HomeSection">
       <div class="Home1">
-        <div class="BoxMe">
+        <div class="BoxMe hidden">
           <img
             class="ProfileImg"
             src="../sources/imgs/Profile2.jpg"
@@ -74,39 +72,54 @@
       </div>
 
       <div class="Home2">
-        <div class="Home-Box2">
+        <div class="Home-Box2 hidden delay">
           <p class="Phead">Hi there!</p>
           <p class="Hhead">Welcome to my portfolio</p>
-          <p class="PContent">
-            I'm a UI/UX Designer and Web Developer, passionate about creating
-            intuitive
-          </p>
-          <p class="PContent">
-            and engaging digital experiences. I graduated with a BSIT degree
-            from
-          </p>
-          <p class="PContent">
-            Quezon City with cum laude honors. In my free time, I love playing
-            online games
-          </p>
-          <p class="PContent">on both mobile devices and computers.</p>
-          <br />
-          <p class="PContent">
-            This is where you can learn more about my journey and stories behind
-            my projects.
-          </p>
-          <p class="PContent">Dive in and explore what I have to offer!</p>
+          <div class="PContent-Container">
+            <p class="PContent">
+              I'm a UI/UX Designer and Web Developer, passionate about creating
+              intuitive and engaging digital experiences. I graduated with a
+              BSIT degree from Quezon City with cum laude honors. In my free
+              time, I love playing online games on both mobile devices and
+              computers. <br /><br />This is where you can learn more about my
+              journey and stories behind my projects.<br />
+              Dive in and explore what I have to offer!
+            </p>
+          </div>
         </div>
       </div>
     </header>
-    <!--End of First Section (HomeSection)-->
 
-    <!--Second Section (AboutSection)-->
+    <!-- Second Section (AboutSection) -->
     <section id="AboutSection">
       <div class="AboutContainer">
         <h1>Hello</h1>
       </div>
     </section>
-    <!--End of Second Section (AboutSection)-->
+    <!-- End of Second Section (AboutSection) -->
+
+    <!-- Third Section (ProjectSection) -->
+    <section id="ProjectSection">
+      <div class="ProjectContainer">
+        <h1>Hi</h1>
+      </div>
+    </section>
+    <!-- End of Second Section (ProjectSection) -->
+
+    <script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          console.log(entry);
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          } else {
+            entry.target.classList.remove("show");
+          }
+        });
+      });
+
+      const hiddenElements = document.querySelectorAll(".hidden");
+      hiddenElements.forEach((el) => observer.observe(el));
+    </script>
   </body>
 </html>
