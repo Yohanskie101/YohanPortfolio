@@ -10,7 +10,10 @@
 body {
   overflow-x: hidden;
   scroll-behavior: smooth;
+  z-index: 0;
+  position: relative;
 }
+
 #HomeSection,
 #AboutSection,
 #ProjectSection {
@@ -34,7 +37,14 @@ body {
 .Home1 {
   height: 100%;
   width: 40%;
-  background-color: #707a8a;
+  background-image: radial-gradient(
+    circle,
+    #707a8a,
+    #5f6979,
+    #4e5868,
+    #3e4858,
+    #2e3848
+  );
 }
 
 .Home2 {
@@ -106,6 +116,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .ProfileImg {
@@ -184,6 +196,11 @@ body {
 .Box-socmed img {
   height: 20px;
   width: 20px;
+  transition: transform 0.3s;
+}
+
+.Box-socmed img:hover {
+  transform: scale(1.5);
 }
 
 .Box-socmed img:hover {
