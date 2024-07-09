@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/main.css" />
+    <script src="../js/main.js"></script>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Radwave&display=swap"
@@ -34,63 +35,68 @@
       <button class="Logo">Yohan</button>
       <div class="top-container">
         <ul class="top-list">
-          <li><button>About Me</button></li>
-          <li><button>Projects</button></li>
-          <li><button>Skills</button></li>
-          <li><button>Resume</button></li>
-          <li><button>Contact</button></li>
+          <li><button data-target="#HomeSection">About Me</button></li>
+          <li><button data-target="#AboutSection">Projects</button></li>
+          <li><button data-target="#ProjectSection">Skills</button></li>
+          <li><button data-target="#ResumeSection">Resume</button></li>
+          <li><button data-target="#ContactSection">Contact</button></li>
         </ul>
       </div>
     </div>
 
     <header id="HomeSection">
-      <div class="Home1">
-        <div class="BoxMe hidden">
-          <img
-            class="ProfileImg"
-            src="../sources/imgs/Profile2.jpg"
-            alt="No Image"
-          />
-          <div class="Box-paragraphs">
-            <p>Mark Johanne</p>
-            <p>Campos</p>
-          </div>
-          <div class="Underline"></div>
-          <div class="Box-paragraphs2">
-            <p>Programmer</p>
-          </div>
+      <div class="inner-sticky">
+        <div class="Home1">
+          <div class="BoxMe hidden">
+            <img
+              class="ProfileImg"
+              src="../sources/imgs/Profile2.jpg"
+              alt="No Image"
+            />
+            <div class="Box-paragraphs">
+              <p>Mark Johanne</p>
+              <p>Campos</p>
+            </div>
+            <div class="Underline"></div>
+            <div class="Box-paragraphs2">
+              <p>Programmer</p>
+            </div>
 
-          <div class="Box-socmed">
-            <a href="https://www.facebook.com/johanne.campos" target="_blank">
-              <img src="../sources/imgs/fb.png" alt="No Image" />
-            </a>
-            <a href="https://www.instagram.com/yohan.nnnnnnn/" target="_blank">
-              <img src="../sources/imgs/instagram.png" alt="No Image" />
-            </a>
-            <a href="https://x.com/mark_johanne" target="_blank">
-              <img src="../sources/imgs/twitter.png" alt="Twitter" />
-            </a>
-            <a href="https://github.com/Yohanskie101" target="_blank">
-              <img src="../sources/imgs/github.png" alt="GitHub" />
-            </a>
+            <div class="Box-socmed">
+              <a href="https://www.facebook.com/johanne.campos" target="_blank">
+                <img src="../sources/imgs/fb.png" alt="No Image" />
+              </a>
+              <a
+                href="https://www.instagram.com/yohan.nnnnnnn/"
+                target="_blank"
+              >
+                <img src="../sources/imgs/instagram.png" alt="No Image" />
+              </a>
+              <a href="https://x.com/mark_johanne" target="_blank">
+                <img src="../sources/imgs/twitter.png" alt="Twitter" />
+              </a>
+              <a href="https://github.com/Yohanskie101" target="_blank">
+                <img src="../sources/imgs/github.png" alt="GitHub" />
+              </a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="Home2">
-        <div class="Home-Box2 hidden delay">
-          <p class="Phead">Hi there!</p>
-          <p class="Hhead">Welcome to my portfolio</p>
-          <div class="PContent-Container">
-            <p class="PContent">
-              I'm a UI/UX Designer and Web Developer, passionate about creating
-              intuitive and engaging digital experiences. I graduated with a
-              BSIT degree from Quezon City with cum laude honors. In my free
-              time, I love playing online games on both mobile devices and
-              computers. <br /><br />This is where you can learn more about my
-              journey and stories behind my projects.<br />
-              Dive in and explore what I have to offer!
-            </p>
+        <div class="Home2">
+          <div class="Home-Box2 hidden delay">
+            <p class="Phead">Hi there!</p>
+            <p class="Hhead">Welcome to my portfolio</p>
+            <div class="PContent-Container">
+              <p class="PContent">
+                I'm a UI/UX Designer and Web Developer, passionate about
+                creating intuitive and engaging digital experiences. I graduated
+                with a BSIT degree from Quezon City with cum laude honors. In my
+                free time, I love playing online games on both mobile devices
+                and computers. <br /><br />This is where you can learn more
+                about my journey and stories behind my projects.<br />
+                Dive in and explore what I have to offer!
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -219,21 +225,5 @@
       </div>
     </section>
     <!-- End of Second Section (ProjectSection) -->
-
-    <script>
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          console.log(entry);
-          if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-          } else {
-            entry.target.classList.remove("show");
-          }
-        });
-      });
-
-      const hiddenElements = document.querySelectorAll(".hidden");
-      hiddenElements.forEach((el) => observer.observe(el));
-    </script>
   </body>
 </html>
