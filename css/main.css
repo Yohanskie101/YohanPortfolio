@@ -21,14 +21,17 @@ body {
   height: 100vh;
 }
 #HomeSection {
+  position: sticky;
   overflow: hidden;
+  top: 0;
+  z-index: -1;
 }
 .inner-sticky {
   display: flex;
   padding-top: 50px;
   position: sticky;
   top: 0;
-  z-index: -999;
+  z-index: 1;
   height: 100%;
   flex: 1;
 }
