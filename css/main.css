@@ -16,10 +16,13 @@ body {
 
 #HomeSection,
 #AboutSection,
-#ProjectSection {
+#ProjectSection,
+#SkillsSection {
   height: 100vh;
 }
-
+#HomeSection {
+  overflow: hidden;
+}
 .inner-sticky {
   display: flex;
   padding-top: 50px;
@@ -27,12 +30,14 @@ body {
   top: 0;
   z-index: -999;
   height: 100%;
-}
-#AboutSection {
-  height: 270vh;
-  background-color: #ffffff;
+  flex: 1;
 }
 #ProjectSection {
+  height: 270vh;
+  padding-top: 50px;
+  background-color: #ffffff;
+}
+#SkillsSection {
   padding-top: 50px;
   background-color: blue;
 }
@@ -112,7 +117,7 @@ body {
   width: 320px;
   background-color: #333b50;
   position: relative;
-  left: 355px;
+  left: -270px;
   top: 125px;
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2); /* Add box shadow */
   color: white;
@@ -214,7 +219,9 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: 200px 0px 0px 100px;
+  position: relative;
+  top: -250px;
+  left: 100px;
 }
 /* About Section*/ /* About Section*/ /* About Section*/ /* About Section*/ /* About Section*/ /* About Section*/ /* About Section*/ /* About Section*/
 .About-title {
@@ -362,4 +369,85 @@ body {
   opacity: 1;
   filter: blur(0);
   transform: translateX(0);
+}
+
+@media (max-width: 600px) {
+  * {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  #HomeSection {
+    height: 200vh;
+  }
+  .inner-sticky {
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .menubar {
+    display: flex;
+    flex: 1;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f9fa; /* Example background color, you can change it */
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+    z-index: 1000; /* Ensure it stays above other content */
+  }
+  .Home1 {
+    display: none;
+  }
+  .Home2 {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(
+      circle,
+      #707a8a,
+      #5f6979,
+      #4e5868,
+      #3e4858,
+      #2e3848
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px 20px 20px; /* Add padding for spacing */
+  }
+  .BoxMe {
+    position: relative;
+  }
+  .Home-Box2 {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 0px 20px 20px 20px; /* Additional padding for spacing */
+  }
+
+  .Home-Box2 .PContent-Container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto; /* Ensure vertical scrolling if needed */
+    width: 100%;
+  }
+
+  .Home-Box2 .PContent {
+    max-width: 90%;
+    font-size: 1em;
+    line-height: 1.5;
+  }
 }
