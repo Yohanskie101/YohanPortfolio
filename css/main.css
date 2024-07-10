@@ -20,6 +20,9 @@ body {
 #SkillsSection {
   height: 100vh;
 }
+.anchor-point {
+  height: 0;
+}
 #HomeSection {
   position: sticky;
   overflow: hidden;
@@ -424,10 +427,10 @@ body {
     padding: 10px 20px 20px 20px; /* Add padding for spacing */
   }
   .BoxMe {
-    position: relative;
+    position: inherit;
   }
   .Home-Box2 {
-    position: relative;
+    position: inherit;
     left: 0;
     bottom: 0;
     text-align: center;
@@ -440,7 +443,6 @@ body {
   }
 
   .Home-Box2 .PContent-Container {
-    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
