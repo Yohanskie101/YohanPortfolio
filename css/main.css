@@ -126,15 +126,34 @@ nav a {
   text-decoration: none;
   font-size: 17px;
   font-family: "Roboto", sans-serif;
-  padding: 10px;
+  margin-right: 15px;
+  padding-bottom: 5px;
   cursor: pointer;
   color: black;
-  transition: 0.3s;
+  position: relative;
+  transition: color 0.3s; /* Transition color change */
 }
-nav a:hover,
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Adjust this value to control the underline position and thickness */
+  width: 0;
+  height: 2px; /* Adjust this value to control the underline thickness */
+  background-color: black;
+  transition: width 0.3s ease; /* Smooth transition for underline */
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%; /* Expand the underline on hover and when active */
+}
+
 nav a.active {
-  color: #0ef;
+  position: relative; /* Ensure the ::after pseudo-element positions relative to this */
 }
+
 .ProfileImg {
   height: 150px;
   width: 150px;
