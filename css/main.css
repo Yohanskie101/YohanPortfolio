@@ -106,18 +106,6 @@ body {
   margin: 0 10px; /* Add some space between the buttons */
 }
 
-.menubar .top-list li button {
-  background-color: transparent; /* Remove background color */
-  border: none; /* Remove border */
-  cursor: pointer; /* Change cursor to pointer on hover */
-  font-size: 17px; /* Adjust font size as needed */
-  font-family: "Roboto", sans-serif; /* Add this line */
-}
-
-.menubar .top-list li button:hover {
-  text-decoration: underline; /* Optional: Add underline on hover for better visibility */
-}
-
 .BoxMe {
   height: 435px;
   width: 320px;
@@ -134,6 +122,19 @@ body {
   overflow: hidden;
 }
 
+nav a {
+  text-decoration: none;
+  font-size: 17px;
+  font-family: "Roboto", sans-serif;
+  padding: 10px;
+  cursor: pointer;
+  color: black;
+  transition: 0.3s;
+}
+nav a:hover,
+nav a.active {
+  color: #0ef;
+}
 .ProfileImg {
   height: 150px;
   width: 150px;
@@ -236,6 +237,7 @@ body {
   line-height: 100px;
   font-family: "Inter", sans-serif;
   margin-left: 50px;
+  padding-left: 115px;
 }
 .Line-container {
   position: absolute;
