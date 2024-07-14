@@ -68,7 +68,7 @@ body {
 
 .menubar {
   height: 50px;
-  background-color: #ffffff;
+
   position: fixed;
   width: 100%;
   display: flex;
@@ -76,6 +76,8 @@ body {
   justify-content: space-between;
   z-index: 999999;
   padding: 0px 40px 0px 50px;
+  background-color: #ffffff;
+  /* backdrop-filter: blur(10px); */
 }
 .Logo {
   background-color: transparent;
