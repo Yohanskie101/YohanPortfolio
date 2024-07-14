@@ -49,4 +49,27 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+  // For Modal
+  $(document).ready(function () {
+    var $modal = $(".modal-frame");
+    var $overlay = $(".modal-overlay");
+
+    $(".close").on("click", function () {
+      $overlay.removeClass("state-show");
+      $modal.removeClass("state-appear").addClass("state-leave");
+
+      // Timeout to ensure animations complete before removing classes
+      setTimeout(function () {
+        $overlay.removeClass("state-leave");
+        $modal.removeClass("state-leave");
+        $("body").removeClass("modal-open"); // Restore body scroll
+      }, 350); // Adjust this timeout to match your modal animation duration
+    });
+
+    $(".open").on("click", function () {
+      $overlay.addClass("state-show");
+      $modal.removeClass("state-leave").addClass("state-appear");
+      $("body").addClass("modal-open"); // Prevent body scroll
+    });
+  });
 });
