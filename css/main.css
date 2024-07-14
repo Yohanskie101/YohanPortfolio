@@ -15,9 +15,7 @@ body {
 }
 
 #HomeSection,
-#AboutSection,
-#ProjectSection,
-#SkillsSection {
+#AboutSection {
   height: 100vh;
 }
 .anchor-point {
@@ -39,11 +37,12 @@ body {
   flex: 1;
 }
 #ProjectSection {
-  height: 270vh;
+  min-height: 270vh;
   padding-top: 50px;
   background-color: #ffffff;
 }
 #SkillsSection {
+  min-height: 100vh;
   padding-top: 50px;
   background-color: blue;
 }
