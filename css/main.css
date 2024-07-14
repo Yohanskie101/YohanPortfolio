@@ -370,9 +370,10 @@ nav a.active {
   flex-direction: column;
   gap: 380px;
   position: absolute;
+  left: 50%;
+  margin-left: -18px;
 }
 .Year-circles {
-  left: 742px;
   top: 60px;
   width: 40px;
   height: 40px;
