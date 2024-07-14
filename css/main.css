@@ -404,6 +404,159 @@ nav a.active {
   width: 30px;
   height: 30px;
 }
+.About-title {
+  font-size: 40px;
+  font-weight: bolder;
+  line-height: 100px;
+  font-family: "Inter", sans-serif;
+  margin-left: 50px;
+  padding-left: 115px;
+}
+.Line-container {
+  position: absolute;
+  left: 50%;
+}
+.Line {
+  width: 4px; /* Adjust the width of the line if needed */
+  height: 1800px;
+  background-color: black;
+}
+.AboutContainer {
+  width: 100%;
+  height: 100%;
+}
+.Container-projects {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.Left-container-projects {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.una {
+  margin-left: 10rem;
+}
+.Projects-box1,
+.Projects-box2 {
+  padding: 20px 15px; /* Consistent padding for both */
+  width: 465px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.Projects-box1:hover,
+.Projects-box2:hover {
+  transition: 0.1s ease;
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Slightly increased shadow for better visibility */
+}
+.Projects-box1:nth-child(2) {
+  margin-right: 10rem;
+  align-self: flex-end; /* Adjusts vertical alignment if needed */
+  position: relative;
+  top: -100px;
+}
+.Projects-box1:nth-child(3) {
+  margin-left: 10rem;
+  position: relative;
+  top: -200px;
+}
+.Projects-box1:nth-child(4) {
+  margin-right: 10rem;
+  position: relative;
+  top: -300px;
+  align-self: flex-end; /* Adjusts vertical alignment if needed */
+}
+
+.Project-img1 {
+  width: 100%;
+  height: 200px;
+  overflow: hidden; /* Ensures that the image does not overflow the container */
+  position: relative; /* Establishes a new positioning context */
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+.Project-img1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures that the image covers the container fully */
+  display: block; /* Removes any unwanted space below the image */
+}
+
+.Project-title {
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+}
+.Project-subtitle {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+}
+.Project-description {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 25px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+.Circles-middle {
+  display: flex;
+  flex-direction: column;
+  gap: 380px;
+  position: absolute;
+  left: 50%;
+  margin-left: -18px;
+}
+.Year-circles {
+  top: 60px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: black;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+}
+.Imgs-Container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.Languages-imgs {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.Languages-imgs img {
+  width: 30px;
+  height: 30px;
+}
+.Click-here {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Click-here img {
+  display: flex;
+  width: 30px;
+  height: 30px;
+}
 /*transitions*/ /*transitions*/ /*transitions*/ /*transitions*/ /*transitions*/ /*transitions*/ /*transitions*/ /*transitions*/ /*transitions*/
 .hidden {
   opacity: 0;
@@ -482,22 +635,18 @@ nav a.active {
     flex: 1;
     padding: 0px 20px 20px 20px; /* Additional padding for spacing */
   }
-  .Projects-box1,
-  .Projects-box2 {
-    width: 100%; /* Full width on small screens */
-    margin-bottom: 20px; /* Space between project boxes */
-  }
-}
-.Home-Box2 .PContent-Container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow-y: auto; /* Ensure vertical scrolling if needed */
-  width: 100%;
-}
 
-.Home-Box2 .PContent {
-  max-width: 90%;
-  font-size: 1em;
-  line-height: 1.5;
+  .Home-Box2 .PContent-Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+  }
+
+  .Home-Box2 .PContent {
+    max-width: 90%;
+    font-size: 1em;
+    line-height: 1.5;
+  }
 }
