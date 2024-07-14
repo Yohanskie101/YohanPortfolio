@@ -296,11 +296,23 @@ nav a.active {
   justify-content: center;
   flex-wrap: wrap;
   border-radius: 5px;
+  cursor: pointer;
+}
+.Projects-box1:hover {
+  transition: 0.1s ease;
+  transform: scale(1.03);
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+}
+.Projects-box2:hover {
+  transition: 0.1s ease;
+  transform: scale(1.03);
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
 }
 .Projects-box1:nth-child(2) {
   position: relative;
-  top: 320.4px; /*Add 20pixels*/
+  top: 320.4px; /* Add 20 pixels */
 }
+
 .Projects-box2:nth-child(2) {
   position: relative;
   top: 725.8px; /*Add 20pixels*/
@@ -314,10 +326,10 @@ nav a.active {
   justify-content: center;
   flex-wrap: wrap;
   border-radius: 5px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 }
 .Project-img1 {
   width: 100%;
@@ -375,14 +387,31 @@ nav a.active {
   font-family: "Inter", sans-serif;
   font-size: 10px;
 }
+.Imgs-Container {
+  display: flex;
+  justify-content: space-between;
 
+  width: 100%;
+}
 .Languages-imgs {
   display: flex;
   gap: 10px;
   width: 100%;
   margin-top: 10px;
 }
+
 .Languages-imgs img {
+  width: 30px;
+  height: 30px;
+}
+.Click-here {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Click-here img {
+  display: flex;
   width: 30px;
   height: 30px;
 }
