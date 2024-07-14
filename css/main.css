@@ -37,7 +37,7 @@ body {
   flex: 1;
 }
 #ProjectSection {
-  min-height: 270vh;
+  min-height: 100vh;
   padding-top: 50px;
   background-color: #ffffff;
 }
@@ -268,28 +268,27 @@ nav a.active {
   height: 1800px;
   background-color: black;
 }
-
+.AboutContainer {
+  width: 100%;
+  height: 100%;
+}
 .Container-projects {
   width: 100%;
   height: 100%;
   display: flex;
 }
 .Left-container-projects {
-  width: 50%;
+  width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
   flex-direction: column;
 }
-.Right-container-projects {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+.una {
+  margin-left: 10rem;
 }
-.Projects-box1 {
-  padding: 20px 15px 20px 15px;
+.Projects-box1,
+.Projects-box2 {
+  padding: 20px 15px; /* Consistent padding for both */
   width: 465px;
   display: flex;
   justify-content: center;
@@ -297,39 +296,30 @@ nav a.active {
   border-radius: 5px;
   cursor: pointer;
 }
-.Projects-box1:hover {
-  transition: 0.1s ease;
-  transform: scale(1.03);
-  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
-}
+.Projects-box1:hover,
 .Projects-box2:hover {
   transition: 0.1s ease;
   transform: scale(1.03);
-  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Slightly increased shadow for better visibility */
 }
 .Projects-box1:nth-child(2) {
+  margin-right: 10rem;
+  align-self: flex-end; /* Adjusts vertical alignment if needed */
   position: relative;
-  top: 320.4px; /* Add 20 pixels */
+  top: -100px;
+}
+.Projects-box1:nth-child(3) {
+  margin-left: 10rem;
+  position: relative;
+  top: -200px;
+}
+.Projects-box1:nth-child(4) {
+  margin-right: 10rem;
+  position: relative;
+  top: -300px;
+  align-self: flex-end; /* Adjusts vertical alignment if needed */
 }
 
-.Projects-box2:nth-child(2) {
-  position: relative;
-  top: 725.8px; /*Add 20pixels*/
-}
-.Projects-box2 {
-  position: relative;
-  top: 405.4px; /*Add 20pixels*/
-  padding: 20px 15px 20px 15px;
-  width: 465px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-}
 .Project-img1 {
   width: 100%;
   height: 200px;
@@ -390,7 +380,6 @@ nav a.active {
 .Imgs-Container {
   display: flex;
   justify-content: space-between;
-
   width: 100%;
 }
 .Languages-imgs {
@@ -493,18 +482,22 @@ nav a.active {
     flex: 1;
     padding: 0px 20px 20px 20px; /* Additional padding for spacing */
   }
-
-  .Home-Box2 .PContent-Container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow-y: auto; /* Ensure vertical scrolling if needed */
-    width: 100%;
+  .Projects-box1,
+  .Projects-box2 {
+    width: 100%; /* Full width on small screens */
+    margin-bottom: 20px; /* Space between project boxes */
   }
+}
+.Home-Box2 .PContent-Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto; /* Ensure vertical scrolling if needed */
+  width: 100%;
+}
 
-  .Home-Box2 .PContent {
-    max-width: 90%;
-    font-size: 1em;
-    line-height: 1.5;
-  }
+.Home-Box2 .PContent {
+  max-width: 90%;
+  font-size: 1em;
+  line-height: 1.5;
 }
